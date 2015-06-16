@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Header</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+</head>
+<body>
+  <div id="header">
+    <div class="wrapper">
+      <div class="top-nav-section">
+        <div class="pull-right curved-section">
+          <ul>
+            <li>
+              <a href="#">Seo Digest</a>
+            </li>
+            <li>
+              <a href="#">Blog</a>
+            </li>
+            <li>
+              <a href="#">Reviews</a>
+            </li>
+          </ul>
+          <div class="reg-login-nav">
+            <a href="#" class="register">Register <b>Free</b> Account!</a>
+            <a href="#" class="login">Login</a>
+          </div>
+        </div>
+      </div>
+      <div class="main-nav-section">
+        <div class="brand-name" style="visibility:hidden"><a href="">ahref</a></div>
+        <div class="nav-container">
+          <ul>
+            <li><a href="">Site Explorer</a></li>
+            <li><a href="">Seo Reports</a></li>
+            <li><a href="">Mentions Tracker</a></li>
+            <li><a href="">Other Tools</a></li>
+            <li><a href="">Plans &amp; Pricing</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="content-section">
+    <div class="chart-section">
+      <div id="chart-container"></div>
+    </div>
+  </div>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src="http://code.highcharts.com/highcharts.js"></script>
+<script>
+$(document).ready(function() {
+
+    var options = {
+        chart: {
+            renderTo: 'chart-container',
+            type: 'column'
+        },
+        title: {
+            text: 'Analytics Report'
+        },
+        xAxis:{
+          title:{
+            text:'My Rank '
+          }
+        },
+        legend: {
+                enabled: false
+            },
+        yAxis:{
+          title:{
+            text:'Number of links'
+          }
+        },
+
+        series: [{}]
+    };
+
+    $.getJSON('json/analytics.json', function(data) {
+        options.series[0].data = data;
+        var chart = new Highcharts.Chart(options);
+    });
+
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+body,html {
+    height: auto;
+    font-size: 13px;
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 400;
+}
+ul,li {
+    list-style: none;
+}
+body,html,ul,li,div {
+    margin: 0;
+    padding: 0;
+}
+#header {
+  background: url('../img/hdr-bg.jpg') 0 0 repeat-x;
+}
+#header:after,.top-nav-section:after{
+    clear: both;
+    display: block;
+    content: "";
+    height: 0;
+}
+.wrapper, .content-section {
+    width: 1010px;
+    margin: 0 auto;
+}
+a {
+    padding: 5px;
+    text-decoration: inherit;
+}
+.top-nav-section li,
+.brand-name,
+.nav-container,
+.nav-container li {
+    float: left;
+}
+.top-nav-section li a {
+  color: #88BCE8;
+  display: block;
+  padding: 15px;
+}
+.pull-right{float: right;}
+.curved-section {
+  background-color: #1B74B3;
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+  width: 560px;
+  height: 45px;
+  background-image: url('../img/topbg.jpg');
+  background-position: 0 0;
+  background-repeat: repeat;
+}
+.brand-name {
+  width: 181px;
+  height: 37px;
+    background-image: url('../img/logo.jpg');
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  text-indent: -9999px;
+}
+/**** Chart ****/
+
+.chart-section {
+    margin: 25px 0 0 0;
+  padding: 10px;
+  border: 10px solid #eee;
+  transition:box-shadow 0.4s ease-in;
+}
+.chart-section:hover {
+  box-shadow: 0px 0px 10px #898787;
+}
+#chart-container{
+    width: 100%;
+    height: 480px;
+}
+a.register {
+  background-color: #FC8C1F;
+  color: #fff;
+  padding: 6px 12px;
+  display: inline-block;
+  margin: 6px;
+  text-transform: uppercase;
+}
