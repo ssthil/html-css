@@ -31,7 +31,6 @@ a {
     text-decoration: inherit;
 }
 .top-nav-section {
-  overflow: auto;
   margin-bottom: 20px;
 }
 .top-nav-section li,
@@ -132,9 +131,25 @@ a.login {
 a.login:hover {
   background-color: #045D96;
   }
+.lang-section{
+  position: relative;
+  cursor: pointer;
+}
 .lang-section h4{
   background: #fff;
 }
 .fa-align{
   margin-left: 10px;
+}
+ul.lang-list{
+  position: absolute;
+  top: 25px;
+  left: 11px;
+  border-right: 0;
+  background: #fff;
+  width: 64px;
+}
+.lang-list li{
+  float: none;
+  margin: 8px 0;
 }
